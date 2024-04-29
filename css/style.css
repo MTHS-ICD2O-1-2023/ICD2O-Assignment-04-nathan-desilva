@@ -12,7 +12,7 @@
 .mdl-layout__header-row {
   justify-content: center;
   padding: 0;
-  color: #f00;
+  color: rgb(250, 250, 250);
 }
 
 .mdl-layout__content {
@@ -26,13 +26,13 @@
 }
 
 .page-content {
-  color: #90f;
+  color: rgb(255, 255, 255);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
 }
 
 body {
-  background-color: #0ff;
+  background-color: rgb(18, 182, 0);
 }
 
 img {
