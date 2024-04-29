@@ -38,11 +38,18 @@
       </header>
       <main class="mdl-layout__content">
         <div id="image">
-          <img class="right-image" src="./images/Subway-logo.png" alt="Subway" width="600" height="315"/>
+          <img
+            class="right-image"
+            src="./images/Subway-logo.png"
+            alt="Subway"
+            width="600"
+            height="315"
+          />
         </div>
         <div class="page-content">
           <h3>Please enter your order:</h3>
           <h4>What type of meat would you like in your sub?</h4>
+          <!-- Simple Select with arrow -->
           <!-- Simple Select with arrow -->
           <div class="mdl-textfield mdl-js-textfield getmdl-select">
             <input
@@ -52,19 +59,19 @@
               id="sub-meat"
               readonly
             />
-            <input type="hidden" value="" name="sub-meat" />
+            <input type="hidden" value="" name="sub-meat />
             <i class="mdl-icon-toggle__label material-icons"
               >keyboard_arrow_down</i
             >
-            <label for="sub-meat" class="mdl-textfield__label">Meat</label>
+            <label for="sample2" class="mdl-textfield__label">Meat</label>
             <ul
-              for="sub-meat"
+              for="sub-meat
               class="mdl-menu mdl-menu--bottom-left mdl-js-menu"
             >
-              <li class="mdl-menu__item" data-val="one">1. Meatball</li>
-              <li class="mdl-menu__item" data-val="two">2. Ham</li>
-              <li class="mdl-menu__item" data-val="three">3. Chicken</li>
-              <li class="mdl-menu__item" data-val="four">4. Turkey</li>
+              <li class="mdl-menu__item" data-val="meatball">Meatball</li>
+              <li class="mdl-menu__item" data-val="ham">Ham</li>
+              <li class="mdl-menu__item" data-val="chicken">Chicken</li>
+              <li class="mdl-menu__item" data-val="turkey">Turkey</li>
             </ul>
           </div>
           <br />
