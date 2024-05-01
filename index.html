@@ -59,19 +59,15 @@
           </label>
           <br />
           <h4>What length would you like your sub?</h4>
-          <div class="mdl-textfield mdl-js-textfield getmdl-select">
-            <input type="text" value="" class="mdl-textfield__input" id="sub-length" readonly/>
-            <input type="hidden" value="" name="sub-length" />
-            <i class="mdl-icon-toggle__label material-icons"
-              >keyboard_arrow_down</i
-            >
-            <label for="sub-length" class="mdl-textfield__label">Length</label>
-            <ul for="sub-length" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-              <li class="mdl-menu__item" data-val="6">6-inch</li>
-              <li class="mdl-menu__item" data-val="12">12-Inch (Footlong)</li>
-            </ul>
-          </div>
-        </div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-5">
+            <input type="radio" id="option-5" class="mdl-radio__button" name="options1" value="1" checked>
+            <span class="mdl-radio__label">6-inch</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-6">
+            <input type="radio" id="option-6" class="mdl-radio__button" name="options1" value="1" checked>
+            <span class="mdl-radio__label">12-inch (Footlong)</span>
+          </label>
+        <br />
         <br />
         <!-- Colored raised button -->
         <button
