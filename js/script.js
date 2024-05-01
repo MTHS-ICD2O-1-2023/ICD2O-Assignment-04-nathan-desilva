@@ -24,7 +24,6 @@ function myButtonClicked() {
   const subLength = parseInt(document.getElementById("option-5").value)
 
   // process
-
   if (subLength == 6) {
     costLength = COST_SIX_INCH
   } else {
