@@ -20,8 +20,8 @@ function myButtonClicked() {
   let price = 0
 
   // input
-  const subMeat = parseInt(document.getElementById("option-1").value)
-  const subLength = parseInt(document.getElementById("option-5").value)
+  const subMeat = (document.getElementById("option-1").value)
+  const subLength = (document.getElementById("option-5").value)
 
   // process
   if (subLength == 6) {
