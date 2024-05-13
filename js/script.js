@@ -15,7 +15,7 @@ function myButtonClicked() {
   const TAX = 1.13
   const COST_SIX_INCH = 1
   const COST_TWELVE_INCH = 1.75
-  const COST_STEAK = 7.0
+  const COST_MEATBALL = 7.0
   const COST_HAM = 5.0
   const COST_CHICKEN = 5.5
   const COST_TURKEY = 6.0
@@ -28,15 +28,15 @@ function myButtonClicked() {
   const subLength = parseInt(document.getElementById("option-5").value)
 
   // process
-  if (subLength == 6) {
+  if (subLength == true) {
     costLength = COST_SIX_INCH
   } else {
     costLength = COST_TWELVE_INCH
   }
 
 
-  if (subMeat == 1) {
-    cost = COST_STEAK
+  if (subMeat == true) {
+    cost = COST_MEATBALL
   } else if (subMeat == 2) {
     cost = COST_HAM
   } else if (subMeat == 3) {
