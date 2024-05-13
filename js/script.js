@@ -7,36 +7,34 @@
 "use strict"
 
 function myButtonClicked() {
-  const meatOption = document.querySelector('input[name="meat-options"]:checked').value;
-  const lengthOption = document.querySelector('input[name="length-options"]:checked').value;
-  let orderDetails = "";
+  const meatOption = document.querySelector('input[name="meat-options"]:checked').value
+  const lengthOption = document.querySelector('input[name="length-options"]:checked').value
+  let orderDetails = 0
 
   // process
   if (meatOption && lengthOption) {
     // Display the order details based on the selected options
     if (meatOption === "1") {
-      orderDetails += "Meatball ";
+      orderDetails += "Meatball "
     } else if (meatOption === "2") {
       orderDetails += "Ham ";
     } else if (meatOption === "3") {
       orderDetails += "Chicken ";
     } else if (meatOption === "4") {
-      orderDetails += "Turkey ";
+      orderDetails += "Turkey "
     }
 
     if (lengthOption === "1") {
-      orderDetails += "6-inch sub.";
+      orderDetails += "6-inch sub."
     } else if (lengthOption === "2") {
-      orderDetails += "12-inch (Footlong) sub.";
+      orderDetails += "12-inch (Footlong) sub."
     }
 
     // output
-    document.getElementById("answer").textContent = "You ordered a " + orderDetails;
+    document.getElementById("answer").textContent = "You ordered a " + orderDetails
   } else {
-    document.getElementById("answer").textContent = "Please select both options.";
+    document.getElementById("answer").textContent = "Please select both options."
   }
-}
-function myButtonClicked() {
   // Define prices for each meat and length option
   const meatPrices = {
     "1": 5, // Meatball price
@@ -51,14 +49,14 @@ function myButtonClicked() {
   };
 
   // Get the selected value for the meat radio buttons
-  const meatOption = document.querySelector('input[name="meatOptions"]:checked').value;
+  const meatOption = document.querySelector('input[name="meatOptions"]:checked').value
 
   // Get the selected value for the length radio buttons
-  const lengthOption = document.querySelector('input[name="lengthOptions"]:checked').value;
+  const lengthOption = document.querySelector('input[name="lengthOptions"]:checked').value
 
   // Calculate the total price based on the selected options
-  const totalPrice = meatPrices[meatOption] + lengthPrices[lengthOption];
+  const totalPrice = meatPrices[meatOption] + lengthPrices[lengthOption]
 
   // Display the total price
-  document.getElementById("answer").textContent = "Total Price: $" + totalPrice;
+  document.getElementById("answer").textContent = "Total Price: $" + totalPrice
 }
