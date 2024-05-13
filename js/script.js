@@ -1,62 +1,52 @@
-// Copyright (c) 2024 Nathan De Silva. All rights reserved
+// Copyright (c) 2023 Dominic M. All rights reserved
 //
-// Created by: Nathan De Silva
-// Created on: April 2024
+// Created by: Dominic M.
+// Created on: April 2023
 // This file contains the JS functions for index.html
 
 "use strict"
 
+/**
+ * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
+ */
+
 function myButtonClicked() {
-  const meatOption = document.querySelector('input[name="meat-options"]:checked').value
-  const lengthOption = document.querySelector('input[name="length-options"]:checked').value
-  let orderDetails = 0
+  // input
+  const TAX = 1.13
+  const COST_SIX_INCH = 1
+  const COST_TWELVE_INCH = 1.75
+  const COST_STEAK = 7.0
+  const COST_HAM = 5.0
+  const COST_CHICKEN = 5.5
+  const COST_TURKEY = 6.0
+  let costLength = 0
+  let cost = 0
+  let price = 0
+
+  // input
+  const subMeat = parseInt(document.getElementById("option-1").value)
+  const subLength = parseInt(document.getElementById("option-5").value)
 
   // process
-  if (meatOption && lengthOption) {
-    // Display the order details based on the selected options
-    if (meatOption === "1") {
-      orderDetails += "Meatball "
-    } else if (meatOption === "2") {
-      orderDetails += "Ham ";
-    } else if (meatOption === "3") {
-      orderDetails += "Chicken ";
-    } else if (meatOption === "4") {
-      orderDetails += "Turkey "
-    }
-
-    if (lengthOption === "1") {
-      orderDetails += "6-inch sub."
-    } else if (lengthOption === "2") {
-      orderDetails += "12-inch (Footlong) sub."
-    }
-
-    // output
-    document.getElementById("answer").textContent = "You ordered a " + orderDetails
+  if (subLength == 6) {
+    costLength = COST_SIX_INCH
   } else {
-    document.getElementById("answer").textContent = "Please select both options."
+    costLength = COST_TWELVE_INCH
   }
-  // Define prices for each meat and length option
-  const meatPrices = {
-    "1": 5, // Meatball price
-    "2": 4, // Ham price
-    "3": 6, // Chicken price
-    "4": 7 // Turkey price
-  };
 
-  const lengthPrices = {
-    "1": 3, // 6-inch sub price
-    "2": 5 // 12-inch (Footlong) sub price
-  };
 
-  // Get the selected value for the meat radio buttons
-  const meatOption = document.querySelector('input[name="meatOptions"]:checked').value
+  if (subMeat == 1) {
+    cost = COST_STEAK
+  } else if (subMeat == 2) {
+    cost = COST_HAM
+  } else if (subMeat == 3) {
+    cost = COST_CHICKEN
+  } else {
+    cost = COST_TURKEY
+  }
 
-  // Get the selected value for the length radio buttons
-  const lengthOption = document.querySelector('input[name="lengthOptions"]:checked').value
+  price = (costLength * cost) * TAX
 
-  // Calculate the total price based on the selected options
-  const totalPrice = meatPrices[meatOption] + lengthPrices[lengthOption]
-
-  // Display the total price
-  document.getElementById("answer").textContent = "Total Price: $" + totalPrice
+  // output
+  document.getElementById("answer").innerHTML = "Your total comes to $" + price.toFixed(2) + ". Thank you for eating at Subway!"
 }
