@@ -4,7 +4,7 @@
 // Created on: April 2024
 // This file contains the JS functions for index.html
 
-"use strict";
+"use strict"
 
 function myButtonClicked() {
   // Input
@@ -20,8 +20,12 @@ function myButtonClicked() {
   let price = 0
 
   // Get the selected values for meat and length options
-  const subMeat = parseInt(document.querySelector('input[name="meat-options"]:checked').value)
-  const subLength = parseInt(document.querySelector('input[name="length-options"]:checked').value)
+  const subMeat = parseInt(
+    document.querySelector('input[name="meat-options"]:checked').value
+  )
+  const subLength = parseInt(
+    document.querySelector('input[name="length-options"]:checked').value
+  )
 
   // Process
   if (subLength === 1) {
@@ -31,17 +35,20 @@ function myButtonClicked() {
   }
 
   if (subMeat === 1) {
-    cost = COST_MEATBALL;
+    cost = COST_MEATBALL
   } else if (subMeat === 2) {
-    cost = COST_HAM;
+    cost = COST_HAM
   } else if (subMeat === 3) {
-    cost = COST_CHICKEN;
+    cost = COST_CHICKEN
   } else if (subMeat === 4) {
-    cost = COST_TURKEY;
+    cost = COST_TURKEY
   }
 
-  price = (costLength * cost) * TAX
+  price = costLength * cost * TAX
 
   // Output
-  document.getElementById("answer").innerHTML = "Your total comes to $" + price.toFixed(2) + ". Thank you for eating at Subway!"
+  document.getElementById("answer").innerHTML =
+    "Your total comes to $" +
+    price.toFixed(2) +
+    ". Thank you for eating at Subway!"
 }
