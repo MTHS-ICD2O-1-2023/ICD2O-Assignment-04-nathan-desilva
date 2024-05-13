@@ -1,17 +1,13 @@
-// Copyright (c) 2023 Dominic M. All rights reserved
+// Copyright (c) 2024 Nathan De Silva All rights reserved
 //
-// Created by: Dominic M.
-// Created on: April 2023
+// Created by: Nathan De Silva
+// Created on: April 2024
 // This file contains the JS functions for index.html
 
-"use strict"
-
-/**
- * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
- */
+"use strict";
 
 function myButtonClicked() {
-  // input
+  // Input
   const TAX = 1.13
   const COST_SIX_INCH = 1
   const COST_TWELVE_INCH = 1.75
@@ -23,30 +19,29 @@ function myButtonClicked() {
   let cost = 0
   let price = 0
 
-  // input
-  const subMeat = parseInt(document.getElementById("option-1").value)
-  const subLength = parseInt(document.getElementById("option-5").value)
+  // Get the selected values for meat and length options
+  const subMeat = parseInt(document.querySelector('input[name="meat-options"]:checked').value)
+  const subLength = parseInt(document.querySelector('input[name="length-options"]:checked').value)
 
-  // process
-  if (subLength == true) {
+  // Process
+  if (subLength === 1) {
     costLength = COST_SIX_INCH
-  } else {
+  } else if (subLength === 2) {
     costLength = COST_TWELVE_INCH
   }
 
-
-  if (subMeat == true) {
-    cost = COST_MEATBALL
-  } else if (subMeat == 2) {
-    cost = COST_HAM
-  } else if (subMeat == 3) {
-    cost = COST_CHICKEN
-  } else {
-    cost = COST_TURKEY
+  if (subMeat === 1) {
+    cost = COST_MEATBALL;
+  } else if (subMeat === 2) {
+    cost = COST_HAM;
+  } else if (subMeat === 3) {
+    cost = COST_CHICKEN;
+  } else if (subMeat === 4) {
+    cost = COST_TURKEY;
   }
 
   price = (costLength * cost) * TAX
 
-  // output
+  // Output
   document.getElementById("answer").innerHTML = "Your total comes to $" + price.toFixed(2) + ". Thank you for eating at Subway!"
 }
